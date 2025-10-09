@@ -41,3 +41,34 @@ public class App {
         imc.close();
     }
 }
+
+
+// Na classe Corpo_Humano inclua a linha c1.massa = "2"; logo depois de instanciar o objeto c1.
+
+// Qual foi a ocorrência?
+// R: Main.java:4: error: massa has private access in CorpoHumano
+//         c1.massa = 2;
+//           ^
+// 1 error
+
+// Qual a conclusão sobre o que aconteceu?
+// R: Os atributos private só podem ser usados dentro da própria classe.
+
+// Na classe Corpo_Humano altere a linha private float Massa para public float Massa;
+
+// Qual foi a ocorrência?
+// R: Massa: 2.0
+
+// Qual a conclusão sobre o que aconteceu?
+// R: Quando o atributo é public, qualquer parte do código pode acessá-lo.
+
+// Na classe Corpo_Humano altere a linha public setVolume(float volume) para private setVolume(float volume)
+
+// Qual foi a ocorrência?
+// R: Main.java:5: error: setVolume(float) has private access in CorpoHumano
+//         c1.setVolume(0.08f);
+//           ^
+// 1 error
+
+// Qual a conclusão sobre o que aconteceu?
+// R: Que os métodos private só podem ser usados dentro da própria classe, então o setVolume() não pode mais ser chamado de fora.
